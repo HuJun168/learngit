@@ -1,0 +1,347 @@
+<include file="./Application/Home/View/Common/header.html"/>
+<div id="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="alert alert-warning" id="myAlert">
+				    <a href="#" class="close" data-dismiss="alert">
+				        &times;
+				    </a>
+				    <p style="color:black;font-size:10px;font-family:'微软雅黑';">欢迎您,来到<span style
+				    ="color:red;">太郎的博客.^_^</span></p>
+				    <p style="color:black;font-size:10px;font-family:'微软雅黑';">→_→ 是否你也会在人潮拥挤的街头，寻寻觅觅，期盼相遇在夕阳斜斜的乌衣巷口 </p>
+				</div>
+				<div class="well">
+					<ol class="breadcrumb">
+						<li><a href="{:U('Index/index')}">首页</a></li>
+    					<li><a href="{:U('Index/index',array('cid'=>$data['cate_name']['cid']))}">{$data.cate_name.cname}</a></li>
+						<li class="active">{$data.title}</li>
+					</ol>
+				
+					<div class="article">
+					 
+						<div class="jumbotron">
+							<div class="article_title">
+								<span><a href="javascript:;">{$data['title']}</a></span>
+							</div>
+
+							<div class="tag-article">
+								<a type="button" class="btn btn-default btn-xs">
+ 								 	<span class="glyphicon glyphicon-time"></span> {$data['sendtime']|date="m-d",###}
+								</a>
+								<a type="button" class="btn btn-default btn-xs">
+ 								 	<span class="glyphicon glyphicon-tags"></span> {$data['tag_name']}
+								</a>
+								<a type="button" class="btn btn-default btn-xs">
+ 								 	<span class="glyphicon glyphicon-user"></span> {$data['author']}
+								</a>
+								<a type="button" class="btn btn-default btn-xs">
+ 								 	<span class="glyphicon glyphicon-eye-open"></span> {$data['click']}
+								</a>
+							</div>
+
+							<div class="photo">
+								<a href="javascript:;" class="thumbnail">
+      								<img src="__ROOT__/Uploads/{$data['thumb']}" alt="...">
+    							</a>	
+							</div>
+
+							<div class="gaiyao">
+								<div class="alert alert-success" role="alert">
+									{$data['digest']}  
+								</div>
+							</div>
+
+							<div class="article_content">	
+								{$data.content|htmlspecialchars_decode}
+							</div>
+
+							<div class="zan">
+								<ul class="pager">
+									 <li>
+									 	<a href="javascript:;" onclick="like({$data['aid']})" id="zan">
+											<i class="glyphicon glyphicon-thumbs-up"></i>
+											<span>点赞</span>
+											<if condition="empty($num)">
+												<span class="badge" id="praise-nums">0</span>
+												<else/>
+												<span class="badge" id="praise-nums">{$num}</span>
+											</if>
+										</a>
+									 </li>	
+								</ul>
+								
+								<div class="dianzan">
+									<div class="alert alert-warning click" role="alert">
+	 								 	<p></p>
+									</div>
+								</div>
+
+							</div>
+
+							
+							<div class="pianfu">
+								<div class="alert alert-warning" role="alert">
+								    <if condition="!empty($prev_title)">
+								       <foreach name="prev_title" item="v" key="k">
+										<p><a href="{:U('Content/show',array('aid'=>$k))}">上一篇 : {$v}</a></p>
+										</foreach>
+								    </if> 
+									
+									<if condition="!empty($next_title)">
+									    <foreach name="next_title" item="v" key="k">
+										<p><a href="{:U('Content/show',array('aid'=>$k))}">下一篇 : {$v}</a></p>
+										</foreach>
+									</if>
+									
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+                <if condition="($comment_num eq 0)">
+					<div class="pinglun">
+						<div class="alert alert-warning" role="alert">
+							<p>暂无评论,赶紧发表你的见解吧.^_^</p>
+						</div>
+					</div>
+				<else/>
+					<div class="pinglun_num">
+						<div class="alert alert-warning" role="alert">
+							<center>共{$comment_num}条评论</center>
+						</div>
+					</div>
+					<foreach name="comment_data" item="v">
+					<div class="pinglun_content">
+						 <div class="panel panel-success">
+						    <div class="panel-heading">
+						        <p><b>{$v.name}</b> &nbsp;&nbsp;&nbsp;<span>说道:</span><span class="comment_time">{$v.addtime|date="Y-m-d H:i:s",###}</span></p>
+						    </div>
+						    <div class="panel-body" style="height:80px;">
+						        <if condition="empty($v['content'])">
+						          <p style="color:#ccc;">这家伙很懒,什么也没留下</p>
+						          <else/>
+						          <p>{$v.content}</p>
+						        </if>
+						    </div>
+						</div>
+						
+						<div class="photo_image">
+							<img src="__ROOT__/Uploads/{$v.image}" style="border-radius:100px;">
+						</div>
+
+					</div>
+					</foreach>
+				</if>
+				
+
+
+				<!-- <div class="pinglun_content">
+					 <div class="panel panel-success">
+					    <div class="panel-heading">
+					        <p><b>小野太郎</b> &nbsp;&nbsp;&nbsp;<span>回复:</span>  <span><b>安倍晋三</b></span><span class="comment_time">2016-12-30 00:12:54</span></p>
+					    </div>
+					    <div class="panel-body" style="height:80px;">
+					        <p>这是一个基本的面板这是一个基本的面板这是一个基本的面板这是一个基本的面板这是一个基本的面板这是一个基本的面板这是一个基本的面板这是一个基本的面板这是一个基本的面板这是一个基本的面板</p>
+					    </div>
+					</div>
+					
+					<div class="photo_image">
+						
+					</div>
+
+					<div class="reply">
+						<a href="javascript:;">回复留言</a>
+					</div>
+
+				</div> -->
+
+				
+				<div class="pages">
+					<!-- <ul class="pagination">
+					    <li><a href="#">&laquo;</a></li>
+					    <li class="p active"><a href="#">1</a></li>
+					    <li class="p"><a href="#">2</a></li>
+					    <li class="p"><a href="#">3</a></li>
+					    <li class="p"><a href="#">4</a></li>
+					    <li class="p"><a href="#">5</a></li>
+					    <li><a href="#">&raquo;</a></li>
+					</ul> -->
+					<ul class='pagination'>{$page}</ul>
+				</div>
+
+				<a href="javascript:;" style="text-decoration:none;" id="li">
+					<div class="alert alert-info" role="alert" id="liuyan">
+					    <center>
+					    	<span class="glyphicon glyphicon-pencil"></span>
+							<span>欢迎留言</span>
+						</center>
+						<div class="no_login">
+							<div class="alert alert-warning" role="alert">
+								 	<p>^_^您尚未登录,还不能评论哟!</p>
+							</div>
+						</div>	
+					</div>
+				</a>
+				
+				<script src="__PUBLIC__/Home/js/ueditor/ueditor.config.js" charset="utf-8"></script>
+				<script src="__PUBLIC__/Home/js/ueditor/ueditor.all.min.js" charset="utf-8"></script>
+				<script src="__PUBLIC__/Home/js/ueditor/lang/zh-cn/zh-cn.js" charset="utf-8"></script>
+
+				<div class="commentdata" style="display:none;">
+				    <form action="javascript:;" method="post">
+						<div class="form-group">
+							<textarea class="form-control" rows="3" placeholder="可以随便说些自己的内容,或者吐槽什么的^_^" style="resize:none;" require="" id="saytext" name="saytext"></textarea>
+							<input type="hidden" name="aid" value="{$data['aid']}">
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn btn-primary btn-xs" id="biaoqing">
+								<span class="glyphicon glyphicon-plus"></span>添加表情
+							</button>
+							<button class="btn btn-danger btn-sm" onclick="guest_comment({$data['aid']})" style="float:right;">发表评论</button>
+						</div>
+						<div class="form-group">
+							
+						</div>
+					</form>
+				</div>
+			</div>
+			<include file="./Application/Home/View/Common/slider.html"/>
+		</div>
+	</div>
+</div>
+<include file="./Application/Home/View/Common/fooder.html"/>
+<script type="text/javascript">
+  (function ($) {
+			$.extend({
+			tipsBox: function (options) {
+			options = $.extend({
+				obj: null,  //jq对象，要在那个html标签上显示
+				str: "+1",  //字符串，要显示的内容;也可以传一段html，如: "<b style='font-family:Microsoft YaHei;'>+1</b>"
+				startSize: "12px",  //动画开始的文字大小
+				endSize: "30px",    //动画结束的文字大小
+				interval: 600,  //动画时间间隔
+				color: "red",    //文字颜色
+				callback: function () { }    //回调函数
+			}, options);
+			$("body").append("<span class='num'>" + options.str + "</span>");
+			var box = $(".num");
+			var left = options.obj.offset().left + options.obj.width() / 2;
+			var top = options.obj.offset().top - options.obj.height();
+			box.css({
+				"position": "absolute",
+				"left": left + "px",
+				"top": top + "px",
+				"z-index": 9999,
+				"font-size": options.startSize,
+				"line-height": options.endSize,
+				"color": options.color
+			});
+			box.animate({
+				"font-size": options.endSize,
+				"opacity": "0",
+				"top": top - parseInt(options.endSize) + "px"
+			}, options.interval, function () {
+				box.remove();
+				options.callback();
+			});
+		}
+	});
+})(jQuery);	
+
+  function like(id){				
+		$.get("{:U('Content/zan_click')}",
+		{
+			aid : id
+		},function(like_data){
+			if(like_data.code > 0){
+				$('#praise-nums').html(like_data.result);
+				$.tipsBox({
+					obj: $('#zan'),
+					str: "+1",
+					callback: function () {
+					}
+				});
+			}
+
+			if(like_data.code <= 0){
+				$('.dianzan div.alert-warning p').html(like_data.result);
+				$('.dianzan').fadeIn(2000,function(){
+					$('.dianzan').hide();	
+				})
+				
+			}
+		})
+	}
+
+	$('#liuyan').click(function(){
+		$.get("{:U('Content/comment_click')}",
+		{
+
+		},function(data){
+			if(data.code == 0){
+				$('#liuyan .no_login').fadeIn(2000,function(){
+					$('#liuyan .no_login').hide();	
+				})
+			}
+
+			if(data.code == 1){
+				$('.commentdata').toggle()
+			}
+		})
+	})
+
+  function guest_comment(aid){
+  	 var value = $('.commentdata textarea').val();
+  	 $.post("{:U('Content/comment')}",{
+  	 	aid : aid,
+        content : value
+  	 },function(data){
+  	 	if(data.code == 1){
+  	 		window.location.reload(true);
+  	 		jSuccess("留言成功！",{
+
+				// autoHide : true,       // 是否自动隐藏提示条 
+
+				clickOverlay : false,  // 是否单击遮罩层才关闭提示条 
+
+				MinWidth : 200,        // 最小宽度 
+
+				TimeShown : 1500,      // 显示时间：毫秒 
+
+				ShowTimeEffect : 200,  // 显示到页面上所需时间：毫秒 
+
+				HideTimeEffect : 200,  // 从页面上消失所需时间：毫秒 
+
+				LongTrip : 15,         // 当提示条显示和隐藏时的位移 
+
+				HorizontalPosition : "center",// 水平位置:left, center, right 
+
+				VerticalPosition : "top",// 垂直位置：top, center, bottom 
+
+				ShowOverlay : false,     // 是否显示遮罩层 
+
+				ColorOverlay : "#000",  // 设置遮罩层的颜色 
+
+				OpacityOverlay : 0.3,   // 设置遮罩层的透明度 
+
+			});
+
+
+  	 	}
+  	 })
+  }
+
+
+  	$('#biaoqing').qqFace({
+
+		id : 'facebox', 
+
+		assign:'saytext', 
+
+		path:"__PUBLIC__/Home/arclist/"	//表情存放的路径
+
+	});
+
+ </script>

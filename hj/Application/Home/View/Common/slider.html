@@ -1,0 +1,24 @@
+<div class="col-md-4">
+    <div class="panel-heading">
+    	<span>浏览排行</span>
+    </div>
+	<ul class="list-group">
+	 <foreach name="click_num" item="v">
+	  <li class="list-group-item">
+	    <span class="badge" style="color:#fff;background:#f4645f;">{$v['click']}</span>
+	  	 <a href="{:U('Content/show',array('aid'=>$v['aid']))}">{$v['title']}</a>
+	  </li>
+     </foreach>
+	</ul>
+
+	<div class="tags">
+		<div class="panel panel-default">
+			<div class="panel-heading">标签云</div>
+				<div class="panel-body">
+				<foreach name="tag" item="v">
+					<a href="{:U('Index/index',array('tid'=>$v['tid']))}">{$v['tname']}</a>
+				</foreach>
+			</div>
+		</div>
+	</div>
+</div>

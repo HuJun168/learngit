@@ -1,0 +1,101 @@
+<include file="./Application/Home/View/Common/header.html"/>
+<div id="main">
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="alert alert-warning" id="myAlert">
+			<if condition="(I('get.tid') eq NULL AND I('get.cid') eq NULL)">
+				
+				    <a href="#" class="close" data-dismiss="alert">
+				        &times;
+				    </a>
+				    <p style="color:black;font-size:10px;font-family:'微软雅黑';">欢迎您,来到<span style
+				    ="color:red;">太郎的博客.^_^</span></p>
+				    
+				
+			</if>
+
+			<if condition="I('get.tid')">
+			    <span class="badge" style="background-color: #f4645f;float:right;margin-right:0px;">
+			        {$count}
+			    </span>
+			    <p style="color:black;font-size:10px;font-family:'微软雅黑';"><span style
+			    ="color:red;">{$tag_name}.^_^</span></p>
+			    
+		    </if>
+
+
+			<if condition="I('get.cid')">
+			    <span class="badge" style="background-color: #f4645f;float:right;margin-right:0px;">
+			        {$count}
+			    </span>
+			    <p style="color:black;font-size:10px;font-family:'微软雅黑';"><span style
+			    ="color:red;">{$cate_gory}.^_^</span></p>
+		    </if>
+			    <p style="color:black;font-size:10px;font-family:'微软雅黑';">→_→ 是否你也会在人潮拥挤的街头，寻寻觅觅，期盼相遇在夕阳斜斜的乌衣巷口 </p>
+			</div>
+			<div class="article">
+				<foreach name="data" item="v">
+				<div class="jumbotron">
+					<div class="data-article">
+						<span class="month">{$v['sendtime']|date="m",###}月</span>
+						<span class="day">{$v['sendtime']|date="d",###}</span>
+					</div>
+
+					<div class="article_title">
+						<span><a href="{:U('Content/show',array('aid'=>$v['aid']))}">{$v['title']}</a></span>
+					</div>
+
+					<div class="tag-article">
+						<a type="button" class="btn btn-default btn-xs">
+							 	<span class="glyphicon glyphicon-time"></span> {$v['sendtime']|date="m-d",###}
+						</a>
+						<a type="button" class="btn btn-default btn-xs">
+							 	<span class="glyphicon glyphicon-tags"></span> {$v['tag_name']}
+						</a>
+						<a type="button" class="btn btn-default btn-xs">
+							 	<span class="glyphicon glyphicon-user"></span> {$v['author']}
+						</a>
+						<a type="button" class="btn btn-default btn-xs">
+							 	<span class="glyphicon glyphicon-eye-open"></span> {$v['click']}
+						</a>
+					</div>
+
+					<div class="photo">
+						<a href="{:U('Content/show',array('aid'=>$v['aid']))}" class="thumbnail">
+							<img src="__ROOT__/Uploads/{$v['thumb']}" alt="">
+						</a>	
+					</div>
+
+					<div class="gaiyao">
+						<div class="alert alert-success" role="alert">
+							{$v['digest']} 
+						</div>
+					</div>
+
+					<div class="article_btn">
+						<a class="btn btn-primary" href="{:U('Content/show',array('aid'=>$v['aid']))}">
+							阅读全文 <span class="badge">{$v['click']}</span>
+						</a>
+					</div>
+				</div>
+				</foreach>
+			</div>
+			<div class="pages">
+				<!-- <ul class="pagination">
+				    <li><a href="#">&laquo;</a></li>
+				    <li class="p active"><a href="#">1</a></li>
+				    <li class="p"><a href="#">2</a></li>
+				    <li class="p"><a href="#">3</a></li>
+				    <li class="p"><a href="#">4</a></li>
+				    <li class="p"><a href="#">5</a></li>
+				    <li><a href="#">&raquo;</a></li>
+				</ul> -->
+				<ul class='pagination'>{$page}</ul>
+			</div>
+		</div>
+		<include file="./Application/Home/View/Common/slider.html"/>
+	</div>
+</div>
+</div>
+<include file="./Application/Home/View/Common/fooder.html"/>

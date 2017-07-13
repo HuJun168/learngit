@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+	    <!-- Loading Bootstrap -->
+	    <link href="__PUBLIC__/Flat/dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+	    <!-- Loading Flat UI -->
+	    <link href="__PUBLIC__/Flat/dist/css/flat-ui.css" rel="stylesheet">
+	    <link href="__PUBLIC__/Flat/docs/assets/css/demo.css" rel="stylesheet">
+	    <link rel="shortcut icon" href="__PUBLIC__/Flat/img/favicon.ico">
+	    <script src="__PUBLIC__/Flat/jquery-1.8.2.min.js"></script>
+	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	    <!--[if lt IE 9]>
+	      <script src="dist/js/vendor/html5shiv.js"></script>
+	      <script src="dist/js/vendor/respond.min.js"></script>
+	    <![endif]-->
+	    <style type="text/css">
+			.page{
+				/*width: 300px;*/
+				/*height: 40px;*/
+				/*margin: 0 auto;*/
+				text-align: center;
+				
+			}
+			.page li{
+				list-style: none;
+				display: inline-block;
+				margin-right: 0px;
+				float: left;
+			}
+	    </style>
+	</head>
+	<body>
+		<table class="table table-hover">
+			<tr class="active">
+			  <th width="30">lid</th>
+			  <th>友链名称</th>
+              <th>logo</th>
+			  <th width="300">地址</th>
+			  <th width="200">操作</th>
+			</tr>
+			<foreach name="data" item="v">
+				<tr class="num{$v.lid}">
+					<td>{$v.lid}</td>
+					<td>{$v.name}</td>
+	                <td><img src="__ROOT__/Uploads/{$v.logo}" alt="" height="30"></td>
+					<td>{$v.url_address}</td>
+					<td>
+						<a href="{:U('Link/update_link',array('lid'=>$v['lid']))}" class="btn btn-sm btn-warning">编辑</a>
+						<a href="javascript:;" onclick="del({$v['lid']})" class="btn btn-sm btn-danger">删除</a>
+					</td>
+				</tr>
+			</foreach>
+		</table>
+	</body>
+</html>
+<script>
+	function del(id){
+		if(confirm('确认删除?')){
+			$.get("{:U('Link/delete_link')}",
+			 {
+			 	id : id
+			 },function(data){
+			 	if(data.code == 1){
+			 		$('tr.num'+id).remove();
+			 	}	
+			 })
+			return false;
+		}
+	}
+</script>

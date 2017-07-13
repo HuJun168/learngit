@@ -1,0 +1,898 @@
+[ 2017-01-22T14:09:27+08:00 ] 127.0.0.1 /hj/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.1200s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0260s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0300s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0450s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.030002s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.031002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.304017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.305017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.052003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.054003s ]
+
+[ 2017-01-22T14:09:34+08:00 ] 127.0.0.1 /hj/index.php/Home/Index/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 5,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0070s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 18 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0070s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 17 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 16 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0080s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.043002s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.043002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.142008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.143008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2017-01-22T14:09:38+08:00 ] 127.0.0.1 /hj/index.php/Home/Index/index/cid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0070s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0070s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `category_cid` = 4 AND `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0520s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `is_recycle` = 1 AND `category_cid` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0080s ]
+SQL: SELECT `cname` FROM `category` WHERE `cid` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2017-01-22T14:09:43+08:00 ] 127.0.0.1 /hj/index.php/Home/Index/index.html?search=ph
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0080s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0070s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 AND `title` LIKE '%ph%' ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `is_recycle` = 1 AND `title` LIKE '%ph%' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 16 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0080s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2017-01-22T14:10:02+08:00 ] 127.0.0.1 /hj/index.php/Home/Index/index.html?search=ggg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0080s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0070s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 AND `title` LIKE '%ggg%' ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `is_recycle` = 1 AND `title` LIKE '%ggg%' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0100s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-01-22T14:10:07+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/show/aid/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: UPDATE `article` SET `click`=click+1 WHERE `aid` = 8 [ RunTime:0.0040s ]
+SQL: SELECT * FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0070s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0070s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0070s ]
+SQL: SELECT `cid`,`cname` FROM `category` WHERE `cid` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 9  [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 7  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0570s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `guest` [ RunTime:0.0400s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.128007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2017-01-22T14:10:12+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/zan_click.html?aid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `praise` WHERE `type` = 0 AND `user_ip` = '127.0.0.1' AND `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `praise` (`user_ip`,`add_time`,`type`,`uid`,`aid`,`nums`,`valid_time`) VALUES ('127.0.0.1','1485065412','0','0','8','1','1485151812') [ RunTime:0.0270s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-22T14:10:14+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/zan_click.html?aid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `praise` WHERE `type` = 0 AND `user_ip` = '127.0.0.1' AND `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-22T14:10:18+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/zan_click.html?aid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `praise` WHERE `type` = 0 AND `user_ip` = '127.0.0.1' AND `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-22T14:10:22+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/show/aid/8/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0080s ]
+SQL: UPDATE `article` SET `click`=click+1 WHERE `aid` = 8 [ RunTime:0.0570s ]
+SQL: SELECT * FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0080s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0080s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0080s ]
+SQL: SELECT `cid`,`cname` FROM `category` WHERE `cid` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 9  [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 7  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0090s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 5,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `guest` [ RunTime:0.0070s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.111007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2017-01-22T14:10:28+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/show/aid/8/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0100s ]
+SQL: UPDATE `article` SET `click`=click+1 WHERE `aid` = 8 [ RunTime:0.0370s ]
+SQL: SELECT * FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0070s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0070s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0080s ]
+SQL: SELECT `cid`,`cname` FROM `category` WHERE `cid` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 9  [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 7  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0080s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `guest` [ RunTime:0.0070s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2017-01-22T14:10:45+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/comment_click.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+NOTIC: [8] Undefined index: uid D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 188 行.
+
+[ 2017-01-22T14:10:48+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/show/aid/8/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0100s ]
+SQL: UPDATE `article` SET `click`=click+1 WHERE `aid` = 8 [ RunTime:0.0330s ]
+SQL: SELECT * FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0080s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0080s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0090s ]
+SQL: SELECT `cid`,`cname` FROM `category` WHERE `cid` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 9  [ RunTime:0.0000s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 7  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0080s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 5,5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `guest` [ RunTime:0.0080s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-22T14:10:52+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/zan_click.html?aid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `praise` WHERE `type` = 0 AND `user_ip` = '127.0.0.1' AND `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-22T14:11:00+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/show/aid/8/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0090s ]
+SQL: UPDATE `article` SET `click`=click+1 WHERE `aid` = 8 [ RunTime:0.0340s ]
+SQL: SELECT * FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0090s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0070s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0070s ]
+SQL: SELECT `cid`,`cname` FROM `category` WHERE `cid` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 9  [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 7  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0070s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 ORDER BY addtime desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `guest` [ RunTime:0.0100s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 8 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.098006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2017-01-22T14:11:10+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/comment_click.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+NOTIC: [8] Undefined index: uid D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 188 行.
+
+[ 2017-01-22T14:11:33+08:00 ] 127.0.0.1 /hj/index.php/Home/Index/index/cid/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0090s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0080s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0080s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `category_cid` = 3 AND `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `is_recycle` = 1 AND `category_cid` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 15 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0070s ]
+SQL: SELECT `cname` FROM `category` WHERE `cid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-01-22T14:11:38+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/show/aid/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0090s ]
+SQL: UPDATE `article` SET `click`=click+1 WHERE `aid` = 19 [ RunTime:0.0310s ]
+SQL: SELECT * FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `aid` = 19 LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0070s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0070s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0090s ]
+SQL: SELECT `cid`,`cname` FROM `category` WHERE `cid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 20  [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 18  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0080s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `comment` WHERE `article_aid` = 19 ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 19 ORDER BY addtime desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `guest` [ RunTime:0.0070s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.102006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2017-01-22T14:11:41+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/zan_click.html?aid=19
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `praise` WHERE `type` = 0 AND `user_ip` = '127.0.0.1' AND `aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `praise` SET `user_ip`='127.0.0.1',`add_time`='1485065501',`type`='0',`uid`='0',`aid`='19',`nums`='2',`valid_time`='1485151901' WHERE `type` = 0 AND `user_ip` = '127.0.0.1' AND `aid` = 19 [ RunTime:0.0290s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-22T14:11:42+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/zan_click.html?aid=19
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `praise` WHERE `type` = 0 AND `user_ip` = '127.0.0.1' AND `aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-22T14:12:25+08:00 ] 127.0.0.1 /hj/index.php/Home/Index/index/cid/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0100s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0070s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0080s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `category_cid` = 3 AND `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `is_recycle` = 1 AND `category_cid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 15 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0080s ]
+SQL: SELECT `cname` FROM `category` WHERE `cid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.098005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-22T14:12:28+08:00 ] 127.0.0.1 /hj/index.php/Home/User/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-22T14:12:34+08:00 ] 127.0.0.1 /hj/index.php/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-22T14:12:37+08:00 ] 127.0.0.1 /hj/index.php/Home/User/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-22T14:14:13+08:00 ] 127.0.0.1 /hj/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0070s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0090s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0070s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2017-01-22T14:14:14+08:00 ] 127.0.0.1 /hj/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0090s ]
+SQL: SELECT `aid`,`title`,`click`,`sendtime`,`update_time`,`thumb`,`digest`,`author`,`user_id`,`category_cid`,`is_recycle` FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `is_recycle` = 1 ORDER BY sendtime desc LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( is_recycle=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0100s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 23 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0080s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 20 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 19 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0090s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.092005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-01-22T14:18:58+08:00 ] 127.0.0.1 /hj/index.php/Home/Content/show/aid/21.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2048] Declaration of Home\Controller\ContentController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\wamp\www\hj\Application\Home\Controller\ContentController.class.php 第 226 行.
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0140s ]
+SQL: UPDATE `article` SET `click`=click+1 WHERE `aid` = 21 [ RunTime:0.2880s ]
+SQL: SELECT * FROM `article` INNER JOIN article_data ON article.aid = article_data.article_aid  WHERE `aid` = 21 LIMIT 1   [ RunTime:0.1020s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0080s ]
+SQL: SELECT `tag_tid` FROM `article_tag` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0080s ]
+SQL: SELECT `tname` FROM `tag` WHERE `tid` = 6 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0080s ]
+SQL: SELECT `cid`,`cname` FROM `category` WHERE `cid` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 22  [ RunTime:0.0010s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `aid` = 20  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `praise` [ RunTime:0.0090s ]
+SQL: SELECT SUM(nums) AS tp_sum FROM `praise` WHERE `aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `comment` WHERE `article_aid` = 21 ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 21 ORDER BY addtime desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `guest` [ RunTime:0.0090s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `image` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `guest` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cid`,`cname` FROM `category` ORDER BY csort desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `article` WHERE `is_recycle` = 1 ORDER BY click desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `comment` WHERE `article_aid` = 21 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.111006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+

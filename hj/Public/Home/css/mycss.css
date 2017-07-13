@@ -1,0 +1,264 @@
+*{
+	font-family: '微软雅黑';
+}
+
+#main .container{
+	margin-top: 70px;
+}
+
+#main .container .article .jumbotron{
+	margin-top:30px;
+	position:relative;
+	box-shadow: 0 0 5px #c2c2c2;
+	background: #fff;
+}
+
+
+#main .container .article .jumbotron .article_title {
+	text-align:center; 
+	margin-top:0px;
+}
+
+#main .container .article .jumbotron .article_title span a {
+	font-size:26px;
+	margin:0px;
+	padding: 0px;
+	color:black;
+}
+
+#main .container .article .jumbotron .article_title span a:hover{
+	text-decoration:none;
+	color:#f4645f;
+}
+
+#main .container .article .jumbotron .data-article{
+	border-radius:100%;
+	width:70px;
+	height:60px;
+	background:#f4645f;
+	position:absolute;
+	top:-25px;
+	left:-30px;
+}
+
+#main .container .article .jumbotron .data-article .month{
+	color:white;
+	font-size:10px;
+	margin-left:22px;
+	margin-top:5px;
+	display:block;
+}
+
+#main .container .article .jumbotron .data-article .day{
+	color:white;
+	font-family:'微软雅黑';
+	margin-left:18px;
+	display:block;
+	font-size:27px;
+	font-weight:bold;
+}
+
+#main .container .article .jumbotron .tag-article{
+	margin:15px;
+	width: 100%;
+	height: 26px;
+	text-align:center;
+	line-height: 26px;
+}
+
+#main .container .article .jumbotron .tag-article a{
+	background: rgb(61,68,80);
+	width:69px;
+	color:white;
+
+}	
+
+#main .container .article .jumbotron .article_btn{
+	text-align: right;
+} 
+
+#main .col-md-4 .panel-heading{
+	width:100%;
+	height:40px;
+	background:#3d4450;
+	color:white;
+}
+
+#main .tags .panel-body a{
+	display:inline-block;
+	border:1px solid #ebebeb;
+	color:#959595;
+	margin:0 7px 7px 0;
+}	
+
+#main .tags .panel-body a:hover{
+	color:#f4645f;
+	text-decoration:none;
+}
+
+#main .container .pages{
+	width:100%;
+	text-align:right;
+}
+
+#main .col-md-4 .list-group a{
+	text-decoration:none;
+	color:#666;
+	font-size:14px;
+}
+
+#main .col-md-4 .list-group a:hover{
+	color:#f4645f;
+}
+
+#fooder{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	font-size:13px ;
+	color:#666;
+}
+
+/*//内容部分*/
+
+#main .col-md-8 .well{
+ background:#fff;
+ border-radius:4px;
+ border:medium none;
+ box-shadow: 0 0 5px #c2c2c2;
+
+}
+
+#main .well .article_content{
+ width:100%;
+ border-left:5px solid #ccc;
+}
+
+#main .well .zan{
+	width:100%;
+	height:30px;
+	margin-top:20px;
+	margin-bottom:50px;
+	border-top:1px solid #ccc;
+	position:relative;
+}
+
+#main .well .zan .badge{
+	color:#fff;
+	background:#f4645f;
+}
+
+#main .well .zan .pager li a{
+	/*position:relative;*/
+}
+
+#main .well .zan .dianzan{
+	width:300px;
+	height:30px;
+	position: absolute;
+	right:120px;
+	top:-50px;
+	display: none;
+	
+}
+
+#main .well .zan .dianzan .click{
+	background:white;
+	border:1px solid #ccc;
+	text-align:center;
+}
+
+#main .well .zan .dianzan .click p{
+	font-size:12px;
+	color:black;
+}
+
+#main .well .pianfu{
+	margin-top:20px;
+}
+
+#main .well .pianfu p{
+	font-size:13px;	
+} 
+
+#main .well .pianfu p a{
+	text-decoration:none;
+}
+
+#main .pinglun_content{
+	position:relative;
+}
+
+#main .pinglun_content .panel-heading p{
+	margin-left: 22px;
+	margin-top:8px;
+	color:black;
+}
+
+#main .pinglun_content .panel-heading .comment_time{
+	float:right;
+	font-size:13px;
+	font-weight:bold;
+}
+
+
+#main .pinglun_content .panel .panel-body p{
+	margin-left:25px;
+	margin-top: 10px;
+}
+
+#main .pinglun_content .photo_image{
+  height:62px;
+  width:62px;
+  border-radius:100px;
+  padding:4px;
+  position:absolute;
+  top:18px;
+  left:-30px;
+}
+
+#main .pinglun_content .reply a{
+	right:10px;
+	top:40px;
+	display: block;
+	position:absolute;
+	text-decoration:none;
+	color:black;
+}
+
+#main #liuyan{
+	position:relative;
+}
+
+#main #liuyan .no_login{
+	text-align:center;
+	width:250px;
+	position:absolute;
+	top:-70px;
+	left:200px;
+	display: none;
+}
+
+
+.comment{width:680px; margin:20px auto; position:relative; background:#fff; padding:20px 50px 50px; border:1px solid #DDD; border-radius:5px;}
+
+.comment h3{height:28px; line-height:28px}
+
+.com_form{width:100%; position:relative}
+
+.com_form p{height:28px; line-height:28px; position:relative; margin-top:10px;}
+
+span.emotion{width:42px; height:20px; background:url(http://www.16code.com/cache/demos/user-say/img/icon.gif) no-repeat 2px 2px; padding-left:20px; cursor:pointer}
+
+span.emotion:hover{background-position:2px -28px}
+
+.qqFace{margin-top:4px;background:#fff;padding:2px;border:1px #dfe6f6 solid;}
+
+.qqFace table td{padding:0px;}
+
+.qqFace table td img{cursor:pointer;border:1px #fff solid;}
+
+.qqFace table td img:hover{border:1px #0066cc solid;}
+
+#show{width:770px; margin:20px auto; background:#fff; padding:5px; border:1px solid #DDD; vertical-align:top;}
+
